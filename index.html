@@ -51,35 +51,38 @@
         .tile:hover {
             transform: scale(1.1); /* Increase size by 10% on hover */
         }
+
+        /* Add custom styling for YouTube tile */
+        .youtube-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>@idkhidden</h1>
 
-        <a class="tile" href="https://github.com/adam3mkfr">
-            <div class="icon">
-                <!-- GitHub icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 24 24">
-                    <path fill="black" d="M12 0a12 12 0 0 0-3.823 23.4c.6.1.823-.263.823-.580 0-.288-.006-1.047-.006-2.060-3.018.658-3.654-.730-3.654-.730-.494-1.256-1.205-1.587-1.205-1.587-.985-.670.075-.657.075-.657 1.088.076 1.658 1.113 1.658 1.113.964 1.654 2.526 1.178 3.143.901.098-.690.376-1.176.682-1.448-2.385-.272-4.878-1.193-4.878-5.314 0-1.175.42-2.134 1.113-2.884-.112-.274-.48-1.362.106-2.840 0 0 .9-.29 2.943 1.100.854-.238 1.768-.355 2.678-.360.910.006 1.824.122 2.678.360 2.043-1.392 2.943-1.100 2.943-1.100.586 1.478.218 2.566.106 2.840.694.750 1.113 1.710 1.113 2.884 0 4.13-2.497 5.040-4.883 5.307.384.332.722.991.722 2.007 0 1.45-.013 2.615-.013 2.972 0 .320.220.694.830.576A12 12 0 0 0 12 0z"/>
-                </svg>
-            </div>
-            <p>Github</p>
-            <div class="tile-share-button" link="https://github.com/adam3mkfr">
-                <!-- Share button icon here -->
-                <svg width="16" height="16" viewBox="0 0 16 16" enable-background="new 0 0 24 24">
-                    <path fill="currentColor" d="M10.6464 3.85347L11 4.20702L11.7071 3.49992L11.3536 3.14636L8.35355 0.146362H7.64645L4.64645 3.14636L4.29289 3.49992L5.00
+        <div class="tile">
+            <a href="https://github.com/adam3mkfr">
+                <div class="icon">
+                    <!-- GitHub icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 24 24">
+                        <path fill="black" d="M12 0a12 12 0 0 0-3.823 23.4c.6.1.823-.263.823-.580 0-.288-.006-1.047-.006-2.060-3.018.658-3.654-.730-3.654-.730-.494-1.256-1.205-1.587-1.205-1.587-.985-.670.075-.657.075-.657 1.088.076 1.658 1.113 1.658 1.113.964 1.654 2.526 1.178 3.143.901.098-.690.376-1.176.682-1.448-2.385-.272-4.878-1.193-4.878-5.314 0-1.175.42-2.134 1.113-2.884-.112-.274-.48-1.362.106-2.840 0 0 .9-.29 2.943 1.100.854-.238 1.768-.355 2.678-.360.910.006 1.824.122 2.678.360 2.043-1.392 2.943-1.100 2.943-1.100.586 1.478.218 2.566.106 2.840.694.750 1.113 1.710 1.113 2.884 0 4.13-2.497 5.040-4.883 5.307.384.332.722.991.722 2.007 0 1.45-.013 2.615-.013 2.972 0 .320.220.694.830.576A12 12 0 0 0 12 0z"/>
+                    </svg>
                 </div>
+                <p>Github</p>
             </a>
         </div>
 
-        <a class="tile" href="https://youtu.be/GU6ZHFZbD58?si=CRJcBaZt2Y1YfU9m">
-            <div class="icon">
+        <div class="tile youtube-tile">
+            <a href="https://youtu.be/GU6ZHFZbD58?si=CRJcBaZt2Y1YfU9m">
                 <!-- YouTube icon -->
                 <img src="https://hdclipartall.com/images/youtube-clipart-youtube-square-icons-1600x1600.png" alt="YouTube" width="32" height="32"/> <!-- Set width and height to 32 -->
-            </div>
-            <p>Youtube</p>
-        </a>
+                <p>Youtube</p>
+            </a>
+        </div>
     </div>
 </body>
 </html>
