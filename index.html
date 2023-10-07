@@ -17,6 +17,12 @@
         .container {
             text-align: center;
         }
+
+        #counter {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -25,11 +31,10 @@
     </header>
     <div class="container">
         <div class="image-container">
-            <img
-                    src="heckerman-unscreen.gif"
-                    alt="idkhidden avatar"/>
+            <img src="heckerman-unscreen.gif" alt="idkhidden avatar"/>
         </div>
         <h1>@retr0</h1>
+        <div id="counter">0 <img src="eye.gif" alt="eye icon"/></div>
 
         <a class="tile" href="https://github.com/adam3mkfr">
             <div class="icon">
@@ -59,5 +64,20 @@
             </div>
         </a>
     </div>
+
+    <script>
+        // JavaScript code to increment the visit counter
+        let counter = 0;
+        const counterElement = document.getElementById("counter");
+
+        // Function to increment the counter and update the display
+        function incrementCounter() {
+            counter++;
+            counterElement.textContent = counter + " ";
+        }
+
+        // Simulate a visit by calling the incrementCounter function
+        incrementCounter();
+    </script>
 </body>
 </html>
