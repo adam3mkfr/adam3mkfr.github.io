@@ -107,6 +107,23 @@
             width: 100%;
             margin-top: 20px;
         }
+
+        /* Style for volume control buttons */
+        .volume-control {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .volume-label {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .volume-button {
+            cursor: pointer;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -119,10 +136,17 @@
         </div>
         <h1>@retr0</h1>
         <!-- Video player for background music -->
-        <video autoplay loop muted playsinline>
+        <video id="mp4Player" autoplay loop muted playsinline>
             <source src="your-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
+        <!-- Volume control buttons -->
+        <div class="volume-control">
+            <label class="volume-label">Volume:</label>
+            <button class="volume-button" onclick="changeVolume(-0.1)">-</button>
+            <button class="volume-button" onclick="changeVolume(0.1)">+</button>
+        </div>
 
         <!-- Rest of your content here -->
 
@@ -144,9 +168,25 @@
             </div>
             <p>YouTube</p>
             <div class="tile-share-button" link="https://www.youtube.com/watch?v=GU6ZHFZbD58">
-                <svg width="16" height="16" viewBox="0 0 16 16" enable-background="new 0 0 24 24" class="sc-gKsewC iPWGYb"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6464 3.85347L11 4.20702L11.7071 3.49992L11.3536 3.14636L8.35355 0.146362H7.64645L4.64645 3.14636L4.29289 3.49992L5 4.20702L5.35355 3.85347L7.5 1.70702V9.49992V9.99992H8.5V9.49992V1.70702L10.6464 3.85347ZM1 5.49994L1.5 4.99994H4V5.99994H2V14.9999H14V5.99994H12V4.99994H14.5L15 5.49994V15.4999L14.5 15.9999H1.5L1 15.4999V5.49994Z" fill="currentColor"></path></svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" enable-background="new 0 0 24 24" class="sc-gKsewC iPWGYb"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6464 3.85347L11 4.20702L11.7071 3.49992L11.3536 3.14636L8.35355 0.146362H7.64645L4.64645 3.14636L4.29289 3.49992L5.00000034 4.20702L5.35355 3.85347L7.49999988 1.70702V9.49992V9.99992H8.50000041V9.49992V1.70702L10.6464 3.85347ZM1 5.49994L1.50000003 4.99994H4V5.99994H2V14.9999H14V5.99994H12V4.99994H14.5L15 5.49994V15.4999L14.5 15.9999H1.5L1 15.4999V5.49994Z" fill="currentColor"></path></svg>
             </div>
         </a>
     </div>
+
+    <script>
+        // JavaScript for volume control
+        const video = document.getElementById("mp4Player");
+
+        function changeVolume(change) {
+            if (video) {
+                video.volume += change;
+                if (video.volume < 0) {
+                    video.volume = 0;
+                } else if (video.volume > 1) {
+                    video.volume = 1;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
