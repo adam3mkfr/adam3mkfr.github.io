@@ -136,10 +136,12 @@
         </div>
         <h1>@retr0</h1>
         <!-- Video player for background music (autoplay and muted) -->
-        <video id="mp4Player" autoplay loop muted playsinline>
-            <source src="your-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <!-- Audio player for background music (autoplay without muted) -->
+<audio id="mp3Player" autoplay loop controls>
+    <source src="your-audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
 
         <!-- Volume control buttons -->
         <div class="volume-control">
