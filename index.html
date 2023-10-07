@@ -60,6 +60,7 @@
             color: rgb(240,240,240);
         }
 
+        /* Smaller rectangular tiles */
         .tile {
             width: 100%;
             background-color: rgb(37,37,37);
@@ -67,6 +68,8 @@
             border-radius: 17px;
             display: flex;
             justify-content: space-between;
+            align-items: center; /* Center align icon and text */
+            padding: 8px; /* Add padding to center content */
         }
 
         .tile:hover {
@@ -75,10 +78,10 @@
         }
 
         .tile-share-button {
-            margin: 8px;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
+            margin: 0 8px; /* Adjust margin */
+            width: 40px; /* Adjust width */
+            height: 40px; /* Adjust height */
+            border-radius: 20px;
             background-color: rgb(52,52,52);
             display: flex;
             align-items: center;
@@ -86,7 +89,7 @@
         }
 
         .tile-share-button i {
-            font-size: 24px;
+            font-size: 24px; /* Adjust font size */
             color: white;
         }
 
